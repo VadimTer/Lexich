@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Лексический и синтаксический анализатор</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <!-- Вкладка для лексического анализа -->
+      <widget class="QWidget" name="lexicalTab">
+       <attribute name="title">
+        <string>Лексический анализ</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QPushButton" name="openFileButton">
+          <property name="text">
+           <string>Открыть файл</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="inputTextEdit">
+          <property name="placeholderText">
+           <string>Введите логические выражения...</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="analyzeButton">
+          <property name="text">
+           <string>Анализировать</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="lexicalTable">
+          <property name="columnCount">
+           <number>3</number>
+          </property>
+          <property name="rowCount">
+           <number>0</number>
+          </property>
+          <attribute name="horizontalHeaderVisible">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderVisible">
+           <bool>true</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>Выражение</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Лексема</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Тип</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <!-- Вкладка для синтаксического анализа -->
+      <widget class="QWidget" name="syntaxTab">
+       <attribute name="title">
+        <string>Синтаксический анализ</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QPushButton" name="openFileButtonSyntax">
+          <property name="text">
+           <string>Открыть файл</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="inputTextEditSyntax">
+          <property name="placeholderText">
+           <string>Введите логические выражения...</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="analyzeButtonSyntax">
+          <property name="text">
+           <string>Анализировать</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="syntaxTable">
+          <property name="columnCount">
+           <number>3</number>
+          </property>
+          <property name="rowCount">
+           <number>0</number>
+          </property>
+          <attribute name="horizontalHeaderVisible">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderVisible">
+           <bool>true</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>Выражение</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Лексема</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Тип</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="syntaxResultText">
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+          <property name="placeholderText">
+           <string>Результат синтаксического анализа...</string>
+          </property>
+          <property name="minimumHeight">
+           <number>50</number> <!-- Увеличиваем высоту для 1-2 строк текста -->
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
